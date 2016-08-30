@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            width: 600px;
+            height: 300px;
+            margin: 30px auto;
+        }
+        .main-left{
+            float: left;
+        }
+        .main-right{
+            float: right;
+            width: 550px;
+            text-align: center;
+            line-height: 30px;
+            position: relative;
+        }
+        .main-right div{
+            height: 59px;
+            border-bottom: 1px solid #cccccc;
+        }
+        .main-left div{
+            height: 59px;
+            line-height: 110px;
+        }
+        .main-right .footer{
+            border: none;
+            width: 550px;
+        }
+        .time{
+            display: block;
+            float: left;
+            width: calc(20% - 1px);
+            border-right: 1px solid #cccccc;
+            height: 10px;
+        }
+        .main-right .point{
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: #0074C5;
+            bottom: 60px;
+            position: absolute;
+        }
+        .line{
+            display: block;
+            width: 2px;
+            height: 0;
+            background-color: black;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transition: height 1s;
+            transform: rotate(0deg);
+        }
+        .outline{
+            left: 3px;
+            width: 2px;
+            display: block;
+            height: 200px;
+            position: relative;
+            z-index: 1;
+        }
+        .trend:hover .point{
+            width: 12px;
+            height: 12px;
+        }
+        .trend:hover .line{
+            width: 3px;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="public.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="main-left">
+            <div class="row-1">1500</div>
+            <div class="row-2">1400</div>
+            <div class="row-3">1300</div>
+            <div class="row-4">1200</div>
+            <div class="row-5">1100</div>
+        </div>
+        <div class="main-right">
+            <p class="trend">
+                <span class="point point1"><i class="outline"><i class="line"></i></i></span>
+                <span class="point point2"><i class="outline"><i class="line"></i></i></span>
+                <span class="point point3"><i class="outline"><i class="line"></i></i></span>
+                <span class="point point4"><i class="outline"><i class="line"></i></i></span>
+                <span class="point point5"></span>
+            </p>
+            <div class="row-1">走势图</div>
+            <div class="row-2"></div>
+            <div class="row-3"></div>
+            <div class="row-4"></div>
+            <div class="row-5"></div>
+            <div class="footer">
+                <span class="time">2016-6-3</span>
+                <span class="time">2016-6-4</span>
+                <span class="time">2016-6-5</span>
+                <span class="time">2016-6-6</span>
+                <span class="time">2016-6-7</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
